@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informatique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="informatique.png">
+  <link rel="stylesheet" href="informatique.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand" id="brand-home" role="button" tabindex="0">
+        <img src="informatique.png" alt="" class="logo" />
+        <span class="brand-name"><span class="b1">Informa</span><span class="b2">tique</span></span>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="tabs" id="tabs">
+        <div class="tab-indicator no-anim" id="tab-indicator"></div>
+        <button class="tab active" data-tab="aide">Aide</button>
+        <button class="tab" data-tab="fichiers">Fichiers</button>
+        <button class="tab" data-tab="os">OS</button>
+        <button class="tab" data-tab="motdepasse">MDP</button>
+        <button class="tab" data-tab="convertir">Convertir</button>
+        <button class="tab" data-tab="speedtest">Débit</button>
+      </nav>
+    </div>
+  </header>
+  <main>
+<section id="aide" class="tab-content active">
+  <div class="os-block">
+    <div class="remote-card">
+      <div class="remote-top">
+      <div class="remote-icon"><img src="https://cdn.simpleicons.org/anydesk/EEF4FF" alt="AnyDesk" /></div>
+        <div class="remote-text">
+          <h4 class="remote-title">Besoin d'une intervention à distance ?</h4>
+          <p class="remote-desc">Je peux intervenir directement sur votre ordinateur grâce à AnyDesk, un logiciel gratuit et sécurisé.</p>
+        </div>
+        <a class="anydesk-btn" id="anydesk-btn" href="https://anydesk.com/fr/downloads/thank-you?dv=win_exe" target="_blank" rel="noopener noreferrer">Télécharger AnyDesk</a>
+      </div>
+      <div class="remote-steps" id="remote-steps"></div>
+    </div>
+  </div>
+  <div class="aide-top">
+    <div class="os-block skills-block">
+      <h3 class="os-title skills">Les services que je vous propose</h3>
+      <div class="skills-grid" id="skills-grid"></div>
+    </div>
+    <div class="os-block contact-block">
+      <h3 class="os-title contact">Me contacter</h3>
+      <div class="contact-card" id="contact-card"></div>
+    </div>
+  </div>
+    </section>
+    <section id="fichiers" class="tab-content">
+    <div class="os-block">
+      <h3 class="os-title">Applications</h3>
+      <div class="apps-grid" id="apps-grid"></div>
+    </div>
+    <div class="os-block">
+      <h3 class="os-title">Fichiers ISO</h3>
+      <div class="iso-grid" id="iso-grid"></div>
+    </div>
+    <div class="os-block">
+    <h3 class="os-title liens">Sites web</h3>
+    <div class="apps-grid" id="sites-grid"></div>
+  </div>
+  <div class="os-block">
+    <h3 class="os-title liens">Liens utiles</h3>
+    <div class="links-grid" id="links-grid"></div>
+  </div>
+  </section>
+  <section id="os" class="tab-content">
+  <div class="os-block os-panel">
+        <h3 class="os-title win">Windows - Commandes</h3>
+        <div class="shell-list" id="win-commands"></div>
+      </div>
+      <div class="os-block os-panel">
+        <h3 class="os-title linux">Linux - Commandes</h3>
+        <div class="shell-list" id="linux-commands"></div>
+      </div>
+    <div class="os-block os-panel">
+          <h3 class="os-title shortcuts">Raccourcis clavier</h3>
+        <div class="shortcuts-list" id="shortcuts-list"></div>
+      </div>
+  </section>
+  <section id="motdepasse" class="tab-content">
+        <div class="pwd-card">
+          <div class="pwd-header">
+            <div class="pwd-icon">🔒</div>
+            <h3 class="os-title pwd">Générateur de mot de passe</h3>
+          </div>
+          <div class="pwd-box">
+            <input type="text" id="pwd-output" readonly placeholder="Cliquez sur générer">
+            <button class="pwd-icon-btn" id="pwd-copy" title="Copier">📋</button>
+          </div>
+          <div class="pwd-options">
+            <div class="pwd-length">
+              <label for="pwd-length">Longueur</label>
+              <input type="number" id="pwd-length" min="4" max="50" value="16">
+            </div>
+            <div class="pwd-checks">
+              <label><input type="checkbox" id="pwd-upper" checked> Majuscules</label>
+              <label><input type="checkbox" id="pwd-numbers" checked> Chiffres</label>
+              <label><input type="checkbox" id="pwd-symbols" checked> Symboles</label>
+            </div>
+          </div>
+          <button class="pwd-generate" id="pwd-generate">Générer 🔄</button>
+          <p class="pwd-copied" id="pwd-copied">Mot de passe copié ✅</p>
+        </div>
+  </section>
+  <section id="convertir" class="tab-content">
+  <div class="os-block">
+    <h3 class="os-title convert">Convertisseur de fichiers</h3>
+    <p class="convert-note">100% dans le navigateur, aucun fichier envoyé sur un serveur.</p>
+    <div class="convert-grid" id="convert-grid"></div>
+  </div>
+  <div class="os-block convert-panel" id="convert-panel" hidden>
+  <h4 class="convert-tool-title" id="convert-tool-title"></h4>
+  <p class="convert-tool-desc" id="convert-tool-desc"></p>
+  <label class="convert-dropzone" id="convert-dropzone">
+    <input type="file" id="convert-file-input" hidden>
+    <span id="convert-dropzone-icon">📁</span>
+    <span id="convert-dropzone-text">Glissez un fichier ici ou cliquez pour choisir</span>
+  </label>
+  <div class="convert-filelist" id="convert-filelist"></div>
+  <div class="convert-option-row" id="convert-option-format" hidden>
+    <label for="convert-format-select">Format cible</label>
+    <select id="convert-format-select"></select>
+  </div>
+  <div class="convert-option-row" id="convert-option-compress" hidden>
+    <button type="button" class="convert-compress-btn" data-level="legere">Légère</button>
+    <button type="button" class="convert-compress-btn active" data-level="recommandee">Recommandée</button>
+    <button type="button" class="convert-compress-btn" data-level="forte">Forte</button>
+  </div>
+  <button class="convert-run-btn" id="convert-run-btn" disabled>Convertir</button>
+  <p class="convert-status" id="convert-status"></p>
+  <a class="convert-download" id="convert-download" download hidden>⬇️ Télécharger de nouveau</a>
+</div>
+  </section>
+  <section id="speedtest" class="tab-content">
+    <div class="os-block">
+      <div class="speed-card">
+       <div class="speed-header">
+          <h3 class="os-title speed">Test de débit</h3>
+          <div class="speed-mode-toggle" id="speed-provider-toggle">
+            <button class="speed-mode-btn active" data-provider="cloudflare">Cloudflare</button>
+            <button class="speed-mode-btn" data-provider="local">Serveur local</button>
+          </div>
+        </div>
+        <div class="ip-card" id="ip-card">
+          <div class="ip-row">
+            <span class="ip-item"><span class="ip-tag">IPv4</span><span class="ip-value ip-value-big" id="ip-value-v4">—</span></span>
+          </div>
+          <span class="ip-isp" id="ip-isp">—</span>
+        </div>
+        <div class="speed-gauges">
+          <div class="speed-gauge">
+            <span class="speed-gauge-label">Ping</span>
+            <div class="speed-gauge-value-row"><span class="speed-gauge-value" id="speed-ping">—</span><span class="speed-gauge-unit">ms</span></div>
+            <span class="speed-gauge-record">Record : <span id="speed-ping-record">—</span>  ms</span>
+          </div>
+          <div class="speed-gauge speed-gauge-main">
+            <span class="speed-gauge-label">Téléchargement</span>
+            <div class="speed-gauge-value-row"><span class="speed-gauge-value" id="speed-download">—</span><span class="speed-gauge-unit">Mbps</span></div>
+            <span class="speed-gauge-record">Record : <span id="speed-download-record">—</span>  Mbps</span>
+          </div>
+          <div class="speed-gauge speed-gauge-main">
+            <span class="speed-gauge-label">Envoi</span>
+            <div class="speed-gauge-value-row"><span class="speed-gauge-value" id="speed-upload">—</span><span class="speed-gauge-unit">Mbps</span></div>
+            <span class="speed-gauge-record">Record : <span id="speed-upload-record">—</span>  Mbps</span>
+          </div>
+          <div class="speed-gauge">
+            <span class="speed-gauge-label">Jitter</span>
+            <div class="speed-gauge-value-row"><span class="speed-gauge-value" id="speed-jitter">—</span><span class="speed-gauge-unit">ms</span></div>
+            <span class="speed-gauge-record">Record : <span id="speed-jitter-record">—</span>  ms</span>
+          </div>
+        </div>
+      <div class="speed-chart-wrap">
+          <canvas id="speed-chart" class="speed-chart"></canvas>
+        </div>
+        <div class="speed-progress" id="speed-progress"><div class="speed-progress-bar" id="speed-progress-bar"></div></div>        <p class="speed-status" id="speed-status">Prêt à démarrer le test.</p>
+        <button class="speed-start-btn" id="speed-start-btn">Démarrer le test</button>
+        <p class="speed-disclaimer">Moteur Cloudflare (speed.cloudflare.com).</p>
+      </div>
+    </div>
+  </section>
+  </main>
+  <div id="mentionsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>📄 Mentions légales</h2>
+      <p><strong>Éditeur du site</strong><br>
+      <span class="contact-inline">Loris GOUHIER - lorisgouhier@gmail.com</span><br>
+      Site personnel sans but commercial, réalisé à des fins de présentation et de développement web.</p>
+      <p><strong>Hébergeur/Diffusion/Domaine</strong><br>
+      GitHub Inc, 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.<br>
+      Cloudflare Inc, 101 Townsend Street, San Francisco, CA 94107, États-Unis.<br>
+      OVH SAS, 2 Rue Kellermann, 59100 Roubaix, France.</p>
+      <p><strong>Propriété intellectuelle</strong><br>
+      L'ensemble du contenu présent sur ce site (textes, images, codes sources, etc) est la propriété exclusive de Loris GOUHIER.
+      Conformément à l'article L.122-4 du Code de la propriété intellectuelle,
+      toute reproduction, représentation, même partielle est interdite sans autorisation préalable.</p>
+      <p><strong>Données personnelles</strong><br>
+      Ce site ne collecte aucune donnée personnelle ni aucun cookie de suivi ; seuls des cookies liés à des icônes de FICHIERS peuvent être déposés.<br>
+      GitHub et Cloudflare peuvent traiter votre adresse IP pour le fonctionnement et la sécurité du site.</p>
+    <p class="maj-line">Site web et mentions légales mis à jour le <b>03/11/2026</b>.</p>
+    </div>
+  </div>
+  <footer>
+    <p>© 2026 | Tous droits réservés | <a onclick="openModal()">Mentions légales</a></p>
+  </footer>
+  <script type="module" src="speedtest.js" defer></script>
+  <script type="module" src="convert.js" defer></script>
+  <script src="informatique.js"></script>
+ </body>
+</html>
