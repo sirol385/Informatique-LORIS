@@ -63,7 +63,6 @@ const LINKS = [
   { name: "Applications", mega: "https://mega.nz/folder/e94CHLQS#K2ONwY9n1VJtGWnGqWIOuQ", nas: "https://nas.lorisg.fr/public/share/fQXKkes-j_JC06W-p71m2Q", logo: "https://cdn-icons-png.flaticon.com/512/5044/5044729.png" },
   { name: "Musiques", mega: "https://mega.nz/folder/zl5jiDrC#pXZqTnPlJBZQxhTo_p3Zww", nas: "https://nas.lorisg.fr/public/share/OyQ7Ak-yIpWQJdpvXT5clA", logo: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_Music_icon.svg" },
   { name: "Reportages Puy du Fou", mega: "https://mega.nz/folder/O5QwzBxA#QbOUKrH9UVKr2fuJ-20K4Q", nas: "https://nas.lorisg.fr/public/share/lux-KojmPAhPh7Od2SNDBQ", logo: "https://play-lh.googleusercontent.com/fHPTRrTeDaGb2x-ULrluEZanP4mqwVEAazyTvMca9wOJBZAvaXvzxpb1Mio18g9_tBRqpXPA25bjKpxYfGPuSOY=w240-h480-rw" },
-  { name: "Spectacles Puy du Fou", mega: "https://mega.nz/folder/3gxT3RiJ#8nrCS6PoFOxZbOrTCY0HWg", nas: "https://nas.lorisg.fr/public/share/tIYs5l41dhHc43jCWY5hUA", logo: "https://play-lh.googleusercontent.com/fHPTRrTeDaGb2x-ULrluEZanP4mqwVEAazyTvMca9wOJBZAvaXvzxpb1Mio18g9_tBRqpXPA25bjKpxYfGPuSOY=w240-h480-rw" },
   { name: "Films", mega: "https://mega.nz/folder/z55S2CqL#VlOWWIZzwBo28_S_SWNZRA", nas: "https://nas.lorisg.fr/public/share/u6pJpYeBlHVIfcQDdbiyuQ", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4xXZVkhyh9UeCKNUTqaDJJ9HPJBYKi13t3l6ljT91RQ&s=10" },];
 const SITES = [
   { name: "FrenchBreaches", desc: "Fuites de données en France", url: "https://frenchbreaches.com/", logo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAnFBMVEUQFkIQFkMQFkQQF0QQF0UQGEURGEYACEAAADEAADgPED4OADQPCzpnan7i4+a7u8EGTZsxhugvguAobMEYNm4AAD1zdYj////U09YAU6Y3mf82k/o3l/8mYa79/f0UJlqChJUAADsMACwhUZYSCzwZOXUbRIWen6xZW3VcX3gkIkg1kPljYnUjWaUsedU9PVgXL2iIiZkGEEJFSGVI84ekAAABjElEQVR4AV3RB3bjMAwEUAIY0rHs9B7Jce/dvv/ddiByW0Zd/xFs4W9ExC8PP37+83dVE+Xhn+Vov8wMECP7l/6GfFfAIiKVzrS/LRjvQQUpxZTgBUyIISikc1PSrXo5/SrBVaxze1dy//DY5un5pQ9YCIbXt/eSj8+vum4anl+DvhERid/fBZu6fnysef8a+nitxffRzXg87g6a+utlMnlm+2kF9omM3U6nMyM282q24GPhiIzL1Wq13jhO5wsW3s7UNFhosc1u3/iAeDvMqsQRwcqAHAeOrtvHYQX9PaD7JXMsZZ+pW/XR4s9oX7t5QFVvsN1yuBKiZHyNKVUZtbdvtttBXwOsYEqp77gYnqbbrU+UiIxjZCwD8j7zaDnQM8sSvxrPtmkeh5IcL8fz6Hy9sKy+TKfTB16LYU8BDijiwmW9JCBGqUoE7ZZBzaAR7JJnCYymEkg8LCK2hoz8TCYBrsEYOLjAEeBoWVkiQVv1oxRWDd5S+DSIt4ww8OmnigVQDSbkNmQX/yW/ALONKa0uPwqZAAAAAElFTkSuQmCC" },
@@ -82,7 +81,8 @@ const WINDOWS = [
   { shell: "diskpart>clean", desc: "Nettoie le disque dur.", right: "Admin" },
   { shell: "diskpart>convert gpt", desc: "Convertit le disque dur en format GPT.", right: "Admin" },
   { shell: "DISM /Online /Cleanup-Image /RestoreHealth", desc: "Répare l'image système Windows.", right: "Admin" },
-  { shell: "Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All", desc: "Active Hyper-V pour faire des machines virtuelles.", right: "Admin" },
+  { shell: "Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All", desc: "Active l'hypervieur Hyper-V.", right: "Admin" },
+  { shell: "Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All", desc: "Désactive l'hypervieur Hyper-V.", right: "Admin" },
   { shell: "Get-CimInstance Win32_BIOS | Select-Object SerialNumber", desc: "Affiche le numéro de série de l'ordinateur.", right: "Terminal" },
   { shell: "get-filehash \"C:\\X.iso\" -algorithm SHA256", desc: "Vérifie l'empreinte SHA256 d'un fichier ISO.", right: "Terminal" },
   { shell: "getmac", desc: "Affiche l'adresse mac de l'ordinateur.", right: "Terminal" },
