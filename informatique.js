@@ -139,7 +139,17 @@ const LINUX = [
   { shell: "systemctl status service", desc: "Affiche l'état d'un service.", right: "Terminal" },
   { shell: "systemctl restart service", desc: "Redémarre un service.", right: "Admin" },
   { shell: "uname -a", desc: "Donne la version du noyau et du système.", right: "Terminal" },
-  { shell: "whoami", desc: "Montre le nom de l'utilisateur actuel.", right: "Terminal" },];
+  { shell: "whoami", desc: "Montre le nom de l'utilisateur actuel.", right: "cat <<EOF > ~/Bureau/informatique-lorisg.desktop
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=Informatique LorisG
+Comment=Accéder à informatique.lorisg.fr
+URL=https://informatique.lorisg.fr
+Icon=text-html
+Terminal=false
+EOF
+chmod +x ~/Bureau/informatique-lorisg.desktop" },];
 const SHORTCUTS = [
   { keys: ["Alt", "F4"], desc: "Ferme la fênetre active." },
   { keys: ["Alt", "Tab"], desc: "Bascule entre les fenêtres ouvertes." },
