@@ -5,7 +5,7 @@ const SKILLS = [
   { name: "Changement de composants", desc: "Remplacement et amélioration des composants internes de l'ordinateur.", icon: "🔩", color: "#f5b74f" },
   { name: "Matériels & logiciels", desc: "Montage d'ordinateur, installation de périphériques et de logiciels.", icon: "🧩", color: "#5fb894" },
   { name: "Montage vidéo & photos drone", desc: "Montage vidéo, édition audio et vues par drone. <a class=\"skill-link\" href=\"https://drone.lorisg.fr\" target=\"_blank\" rel=\"noopener noreferrer\"><span class=\"br-mobile\"></span>drone.lorisg.fr</a>", icon: "🎬", color: "#eef4ff" },
-  { name: "Dépannage à distance", desc: "Intervention rapide et sécurisée via AnyDesk.", icon: "🌐", color: "#2f6fd0" }];
+  { name: "Dépannage à distance", desc: "Intervention rapide et sécurisée via TeamViewer.", icon: "🌐", color: "#2f6fd0" }];
 const REMOTE_STEPS = [ "Cliquez sur le bouton ci-dessus pour télécharger TeamViewer.", "Double-cliquez sur le fichier téléchargé pour le lancer.", "Transmettez-moi l'ID et le mot de passe qui s'affichent.", "Cliquez sur \"Autoriser\" lorsque la demande de connexion apparaît." ];
 const APPS = [
   { name: "7 Zip", desc: "Compression d'archives", url: "https://7-zip.org/download.html", logo: "https://upload.wikimedia.org/wikipedia/commons/3/32/7-Zip_Icon.svg" },
@@ -124,19 +124,22 @@ const LINUX = [
   { shell: "lsblk", desc: "Liste les disques et partitions.", right: "Terminal" },
   { shell: "nano X", desc: "Édite un fichier dans le terminal.", right: "Terminal" },
   { shell: "passwd", desc: "Change le mot de passe de l'utilisateur actuel.", right: "Terminal" },
-  { shell: "ping google.com", desc: "Teste la connexion réseau.", right: "Terminal" },
+  { shell: "ping x", desc: "Teste la connexion réseau.", right: "Terminal" },
   { shell: "poweroff", desc: "Éteint la machine immédiatement.", right: "Admin" },
+  { shell: "reboot", desc: "Redémarre la machine immédiatement.", right: "Admin" },
   { shell: "pwd", desc: "Affiche le dossier courant.", right: "Terminal" },
-  { shell: "su -", desc: "Passe en super-utilisateur (root) avec son environnement.", right: "Terminal" },
+  { shell: "su -", desc: "Passe en super-utilisateur (root).", right: "Terminal" },
   { shell: "sudo apt update", desc: "Met à jour la liste puis installe les paquets disponibles DKMUZ.", right: "Admin" },
   { shell: "sudo apt upgrade", desc: "Met à jour la dernière version du noyau et du système DKMUZ.", right: "Admin" },
-  { shell: "sudo apt-get clean", desc: "Vide le cache des paquets DKMUZ.", right: "Admin" },
-  { shell: "sudo apt-get autoremove -y", desc: "Supprime les dépendances inutilisées DKMUZ.", right: "Admin" },
+  { shell: "sudo apt-get autoremove", desc: "Vide le cache des paquets DKMUZ.", right: "Admin" },
+  { shell: "sudo apt-get clean", desc: "Supprime les dépendances inutilisées DKMUZ.", right: "Admin" },
   { shell: "sudo dnf update", desc: "Met à jour la liste puis installe les paquets disponibles F.", right: "Admin" },
   { shell: "sudo dnf upgrade", desc: "Met à jour les paquets disponibles F.", right: "Admin" },
-  { shell: "sudo dnf clean all", desc: "Vide le cache des paquets F.", right: "Admin" },
-  { shell: "sudo dnf autoremove -y", desc: "Supprime les dépendances inutilisées F.", right: "Admin" },
+  { shell: "sudo dnf clean autoremove", desc: "Vide le cache des paquets F.", right: "Admin" },
+  { shell: "sudo dnf clean all", desc: "Supprime les dépendances inutilisées F.", right: "Admin" },
   { shell: "systemctl status service", desc: "Affiche l'état d'un service.", right: "Terminal" },
+  { shell: "systemctl start service", desc: "Démarre un service.", right: "Admin" },
+  { shell: "systemctl stop service", desc: "Arrête un service.", right: "Admin" },
   { shell: "systemctl restart service", desc: "Redémarre un service.", right: "Admin" },
   { shell: "uname -a", desc: "Donne la version du noyau et du système.", right: "Terminal" },
   { shell: "whoami", desc: "Montre le nom de l'utilisateur actuel.", right: "Terminal" },];
