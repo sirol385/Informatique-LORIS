@@ -6,7 +6,7 @@ const SKILLS = [
   { name: "Matériels & logiciels", desc: "Montage d'ordinateur, installation de périphériques et de logiciels.", icon: "🧩", color: "#5fb894" },
   { name: "Montage vidéo & photos drone", desc: "Montage vidéo, édition audio et vues par drone. <a class=\"skill-link\" href=\"https://drone.lorisg.fr\" target=\"_blank\" rel=\"noopener noreferrer\"><span class=\"br-mobile\"></span>drone.lorisg.fr</a>", icon: "🎬", color: "#eef4ff" },
   { name: "Dépannage à distance", desc: "Intervention rapide et sécurisée via AnyDesk.", icon: "🌐", color: "#2f6fd0" }];
-const REMOTE_STEPS = [ "Cliquez sur le bouton ci-dessus pour télécharger AnyDesk.", "Double-cliquez sur le fichier téléchargé pour le lancer.", "Transmettez-moi le numéro du poste de travail qui s'affiche.", "Cliquez sur \"Accepter\" lorsque la demande de connexion apparaît."];
+const REMOTE_STEPS = [ "Cliquez sur le bouton ci-dessus pour télécharger TeamViewer.", "Double-cliquez sur le fichier téléchargé pour le lancer.", "Transmettez-moi l'ID et le mot de passe qui s'affichent.", "Cliquez sur \"Autoriser\" lorsque la demande de connexion apparaît." ];
 const APPS = [
   { name: "7 Zip", desc: "Compression d'archives", url: "https://7-zip.org/download.html", logo: "https://upload.wikimedia.org/wikipedia/commons/3/32/7-Zip_Icon.svg" },
   { name: "Adobe Acrobat", desc: "Lecteur de PDF", url: "https://get.adobe.com/reader/", logo: "https://upload.wikimedia.org/wikipedia/commons/6/60/Adobe_Acrobat_Reader_icon_%282020%29.svg" },
